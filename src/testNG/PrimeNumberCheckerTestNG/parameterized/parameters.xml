@@ -4,7 +4,7 @@
     <parameter name="expectedResult" value="true"/>
     <test name="Sample test">
         <classes>
-            <class name="testNG.parameterized.ParameterizedPrimeNumberCheckerTest" />
+            <class name="testNG.PrimeNumberCheckerTestNG.parameterized.ParameterizedPrimeNumberCheckerTest" />
         </classes>
     </test>
 </suite>

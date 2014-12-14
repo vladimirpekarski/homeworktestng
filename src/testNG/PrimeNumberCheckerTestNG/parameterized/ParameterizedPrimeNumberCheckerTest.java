@@ -1,4 +1,4 @@
-package testNG.parameterized;
+package testNG.PrimeNumberCheckerTestNG.parameterized;
 
 import classes.PrimeNumberChecker;
 import org.testng.Assert;

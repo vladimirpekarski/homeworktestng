@@ -1,4 +1,4 @@
-package testNG.simpletests;
+package testNG.PrimeNumberCheckerTestNG.simpletests;
 
 import classes.PrimeNumberChecker;
 import org.testng.Assert;

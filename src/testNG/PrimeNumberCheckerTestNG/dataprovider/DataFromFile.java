@@ -1,4 +1,4 @@
-package testNG.dataprovider;
+package testNG.PrimeNumberCheckerTestNG.dataprovider;
 
 import org.yaml.snakeyaml.Yaml;
 
