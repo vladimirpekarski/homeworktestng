@@ -1,10 +1,11 @@
-package testNG.CalculatorTestNG.summfunction;
+package testNG.CalculatorTestNG.summfunctiontest;
 
 import classes.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import testNG.CalculatorTestNG.dataprovide.DataFromFileToCalculator;
 
 public class ClassCalculatorSummFunctionTest {
     private Calculator calculator;
@@ -13,7 +14,7 @@ public class ClassCalculatorSummFunctionTest {
     @BeforeTest
     public void initialize() {
         calculator = new Calculator();
-        testingDataForFunctSumm  = DataFromFileSummFunct.readFromFile("./resources/dataForTestClassCalcFunctSumm.yaml");
+        testingDataForFunctSumm  = DataFromFileToCalculator.readFromFile("./resources/dataForTestClassCalcFunctSumm.yaml");
     }
 
     @DataProvider(name = "test2")

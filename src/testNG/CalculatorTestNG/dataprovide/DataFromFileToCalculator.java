@@ -1,4 +1,4 @@
-package testNG.CalculatorTestNG.summfunction;
+package testNG.CalculatorTestNG.dataprovide;
 
 import org.yaml.snakeyaml.Yaml;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class DataFromFileSummFunct {
+public class DataFromFileToCalculator {
     public static Object[][] readFromFile (String path) {
         ArrayList<HashMap<String, String>> map = null;
 
