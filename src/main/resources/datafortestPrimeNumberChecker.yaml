@@ -1,13 +1,4 @@
 -
-  number: -1
-  expectedresult: false
--
-  number: 0
-  expectedresult: false
--
-  number: 1
-  expectedresult: false
--
   number: 2
   expectedresult: true
 -
