@@ -3,7 +3,6 @@ package classes;
 public class StringReverseOrder implements CharSequence {
     private String reversedValue;
 
-
     public String reverseValue (String originalValue) {
         char [] tempCharArray = new char[originalValue.length()];
         char [] charArray = originalValue.toCharArray();
