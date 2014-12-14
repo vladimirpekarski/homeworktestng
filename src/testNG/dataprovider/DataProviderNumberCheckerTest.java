@@ -1,6 +1,6 @@
 package testNG.dataprovider;
 
-import objects.PrimeNumberChecker;
+import classes.PrimeNumberChecker;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;

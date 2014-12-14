@@ -1,4 +1,4 @@
-package objects;
+package classes;
 
 public class StringReverseOrder implements CharSequence {
     private String originalValue;

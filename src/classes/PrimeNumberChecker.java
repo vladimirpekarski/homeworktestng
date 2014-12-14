@@ -1,4 +1,4 @@
-package objects;
+package classes;
 
 public class PrimeNumberChecker {
     public Boolean validate(final Integer primeNumber) {

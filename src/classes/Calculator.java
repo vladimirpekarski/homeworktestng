@@ -1,4 +1,4 @@
-package objects;
+package classes;
 
 public class Calculator {
     public double summ(double value1, double value2) {
