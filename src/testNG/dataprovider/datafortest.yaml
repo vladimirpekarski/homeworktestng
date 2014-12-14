@@ -1,0 +1,60 @@
+-
+  number: -1
+  expectedresult: false
+-
+  number: 0
+  expectedresult: false
+-
+  number: 1
+  expectedresult: false
+-
+  number: 2
+  expectedresult: true
+-
+  number: 3
+  expectedresult: true
+-
+  number: 5
+  expectedresult: true
+-
+  number: 7
+  expectedresult: true
+-
+  number: 11
+  expectedresult: true
+-
+  number: 13
+  expectedresult: true
+-
+  number: 17
+  expectedresult: true
+-
+  number: 19
+  expectedresult: true
+-
+  number: 23
+  expectedresult: true
+-
+  number: 29
+  expectedresult: true
+-
+  number: 31
+  expectedresult: true
+-
+  number: 37
+  expectedresult: true
+-
+  number: 41
+  expectedresult: true
+-
+  number: 43
+  expectedresult: true
+-
+  number: 47
+  expectedresult: true
+-
+  number: 53
+  expectedresult: true
+-
+  number: 59
+  expectedresult: true
