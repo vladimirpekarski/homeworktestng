@@ -6,7 +6,7 @@
 
     <groupId>TestNG.ThreeClasses</groupId>
     <artifactId>Homework</artifactId>
-    <version>1.0T</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
