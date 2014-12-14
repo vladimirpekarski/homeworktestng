@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import testNG.CalculatorTestNG.dataprovide.DataFromFileToCalculator;
 
 public class ClassCalculatorSqrtFunctionTest {
     private Calculator calculator;
@@ -14,16 +13,16 @@ public class ClassCalculatorSqrtFunctionTest {
     @BeforeTest
     public void initialize() {
         calculator = new Calculator();
-        testingDataForFunctSumm  = DataFromFileToCalculator.readFromFile("./resources/dataForTestClassCalcFunctDivide.yaml");
+        testingDataForFunctSumm  = DataFromFileForSqrtFunction.readFromFile("./resources/dataForTestClassCalcSqrt.yaml");
     }
 
     @DataProvider(name = "test4")
-    public static Object[][] classCalcFunctSumm() {
+    public static Object[][] classCalcFunctSqrt() {
         return testingDataForFunctSumm;
     }
 
     @Test(dataProvider = "test4")
-    public void TestForClassSqrtFunctDicide(Double firstValue, Double expectedResult) {
+    public void TestForClassSqrtFunctSqrt(Double firstValue, Double expectedResult) {
         Assert.assertEquals(calculator.sqrt(firstValue), expectedResult);
     }
 }

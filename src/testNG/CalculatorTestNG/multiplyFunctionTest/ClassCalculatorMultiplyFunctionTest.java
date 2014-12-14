@@ -18,12 +18,12 @@ public class ClassCalculatorMultiplyFunctionTest {
     }
 
     @DataProvider(name = "test4")
-    public static Object[][] classCalcFunctSumm() {
+    public static Object[][] classCalcFunctMultiply() {
         return testingDataForFunctSumm;
     }
 
     @Test(dataProvider = "test4")
-    public void TestForClassCalcFunctDicide(Double firstValue, Double secondValue, Double expectedResult) {
+    public void TestForClassCalcFunctMultiply(Double firstValue, Double secondValue, Double expectedResult) {
         Assert.assertEquals(calculator.multiply(firstValue, secondValue), expectedResult);
     }
 }

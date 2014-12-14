@@ -1,0 +1,15 @@
+-
+  firstValue: 0.0
+  expectedResult: 0.0
+-
+  firstValue: 1.0
+  expectedResult: 1.0
+-
+  firstValue: 9.0
+  expectedResult: 3.0
+-
+  firstValue: 25.0
+  expectedResult: 5.0
+-
+  firstValue: 10000.0
+  expectedResult: 100.0

@@ -25,7 +25,7 @@ public class DataFromFileForSqrtFunction {
         Object[][] testData = new Object[map.size()][2];
         for (int i = 0; i < map.size(); i++) {
             testData[i][0] = map.get(i).get("firstValue");
-            testData[i][1] = map.get(i).get("secondValue");
+            testData[i][1] = map.get(i).get("expectedResult");
         }
 
         return testData;

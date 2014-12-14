@@ -31,4 +31,5 @@ public class DataFromFileToCalculator {
 
         return testData;
     }
+
 }

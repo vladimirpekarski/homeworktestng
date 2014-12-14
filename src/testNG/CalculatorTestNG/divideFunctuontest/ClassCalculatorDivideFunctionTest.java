@@ -18,12 +18,12 @@ public class ClassCalculatorDivideFunctionTest {
     }
 
     @DataProvider(name = "test3")
-    public static Object[][] classCalcFunctSumm() {
+    public static Object[][] classCalcFunctDivide() {
         return testingDataForFunctSumm;
     }
 
     @Test(dataProvider = "test3")
-    public void TestForClassCalcFunctDicide(Double firstValue, Double secondValue, Double expectedResult) {
+    public void TestForClassCalcFunctDivide(Double firstValue, Double secondValue, Double expectedResult) {
         Assert.assertEquals(calculator.divide(firstValue, secondValue), expectedResult);
     }
 }
