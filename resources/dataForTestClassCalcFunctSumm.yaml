@@ -1,0 +1,46 @@
+-
+  firstValue: 0.
+  secondValue: 0.0
+  expectedResult: 0.0
+-
+  firstValue: -5.0
+  secondValue: 0.0
+  expectedResult: -5.0
+-
+  firstValue: -5.0
+  secondValue: -5.0
+  expectedResult: -10.0
+-
+  firstValue: -0.0
+  secondValue: -5.0
+  expectedResult: -5.0
+-
+  firstValue: 5.0
+  secondValue: 0.0
+  expectedResult: 5.0
+-
+  firstValue: 0.0
+  secondValue: 5.0
+  expectedResult: 5.0
+-
+  firstValue: 5.0
+  secondValue: 5.0
+  expectedResult: 10.0
+-
+  firstValue: 0.5
+  secondValue: 0.5
+  expectedResult: 1.0
+-
+  firstValue: -0.5
+  secondValue: -0.5
+  expectedResult: -1.0
+
+-
+  firstValue: -0.5
+  secondValue: 0.5
+  expectedResult: 0.0
+
+-
+  firstValue: 0.5
+  secondValue: -0.5
+  expectedResult: 0.0
