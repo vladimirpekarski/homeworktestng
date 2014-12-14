@@ -16,7 +16,7 @@ public class DataProviderNumberCheckerTest {
     @BeforeTest
     public void initialize() throws IOException {
         primeNumberChecker = new PrimeNumberChecker();
-        testingData = DataFromFile.readFromFile("./src/testNG/dataprovider/datafortest.yaml");
+        testingData = DataFromFile.readFromFile("./resources/datafortestPrimeNumberChecker.yaml");
     }
 
     @DataProvider(name = "test1")
