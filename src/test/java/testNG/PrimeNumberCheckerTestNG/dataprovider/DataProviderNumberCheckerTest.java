@@ -1,11 +1,11 @@
 package testNG.PrimeNumberCheckerTestNG.dataprovider;
 
 import classes.PrimeNumberChecker;
-import dataprovideclasses.DataFromFileForPrimeNumberChecker;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import testNG.dataprovideclasses.DataFromFileForPrimeNumberChecker;
 
 import java.io.IOException;
 

@@ -1,11 +1,11 @@
 package testNG.CalculatorTestNG.multiplyFunctionTest;
 
 import classes.Calculator;
-import dataprovideclasses.DataFromFileToCalculator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import testNG.dataprovideclasses.DataFromFileToCalculator;
 
 public class ClassCalculatorMultiplyFunctionTest {
     private Calculator calculator;

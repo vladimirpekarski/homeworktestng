@@ -1,11 +1,11 @@
 package testNG.CalculatorTestNG.sqrtFunctionTest;
 
 import classes.Calculator;
-import dataprovideclasses.DataFromFileForSqrtFunction;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import testNG.dataprovideclasses.DataFromFileForSqrtFunction;
 
 public class ClassCalculatorSqrtFunctionTest {
     private Calculator calculator;

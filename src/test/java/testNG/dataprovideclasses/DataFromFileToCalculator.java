@@ -1,4 +1,4 @@
-package dataprovideclasses;
+package testNG.dataprovideclasses;
 
 import org.yaml.snakeyaml.Yaml;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class DataFromFileForSqrtFunction {
+public class DataFromFileToCalculator {
     public static Object[][] readFromFile(String path) {
         ArrayList<HashMap<String, String>> map = null;
 
@@ -22,10 +22,11 @@ public class DataFromFileForSqrtFunction {
             e.printStackTrace();
         }
 
-        Object[][] testData = new Object[map.size()][2];
+        Object[][] testData = new Object[map.size()][3];
         for (int i = 0; i < map.size(); i++) {
             testData[i][0] = map.get(i).get("firstValue");
-            testData[i][1] = map.get(i).get("expectedResult");
+            testData[i][1] = map.get(i).get("secondValue");
+            testData[i][2] = map.get(i).get("expectedResult");
         }
 
         return testData;
