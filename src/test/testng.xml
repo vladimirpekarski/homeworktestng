@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Three Classes">
+    <test name="PrimeNumberCheckerr">
+        <parameter name="valueToTest" value="6"/>
+        <parameter name="expectedResult" value="false"/>
+        <classes>
+            <class name="testNG.PrimeNumberCheckerTestNG.parameterized.ParameterizedPrimeNumberCheckerTest" />
+        </classes>
+        <packages>
+            <package name="testNG.PrimeNumberCheckerTestNG.dataprovider" />
+            <package name="testNG.PrimeNumberCheckerTestNG.simpletests" />
+        </packages>
+    </test>
+    <test name="Calculator">
+        <packages>
+            <package name="testNG.CalculatorTestNG.divideFunctuontest" />
+            <package name="testNG.CalculatorTestNG.multiplyFunctionTest" />
+            <package name="testNG.CalculatorTestNG.sqrtFunctionTest" />
+            <package name="testNG.CalculatorTestNG.summfunctiontest" />
+        </packages>
+    </test>
+    <test name="StringRevers">
+        <packages>
+            <package name="testNG.StringReverseTestNG" />
+        </packages>
+    </test>
+</suite>
