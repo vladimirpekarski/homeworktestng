@@ -30,7 +30,7 @@ public class PrimeNumberCheckerSimpleTest {
         primeNumberChecker.validate(null);
     }
 
-    @Test(enabled = false)
+    @Test
     public void testPrimeNumberCheckerNegativeValue() {
         Assert.assertFalse(primeNumberChecker.validate(-5));
     }
