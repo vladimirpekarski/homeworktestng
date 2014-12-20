@@ -14,7 +14,7 @@ public class ClassCalcSqrtNegativeValue {
     }
 
     @Test
-    public void test() {
+    public void negativeValueInSqrt() {
         Assert.assertTrue(Double.isNaN(calculator.sqrt(-5)));
     }
 }

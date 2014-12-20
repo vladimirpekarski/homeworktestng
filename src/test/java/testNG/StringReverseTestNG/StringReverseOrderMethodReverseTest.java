@@ -32,13 +32,13 @@ public class StringReverseOrderMethodReverseTest {
     @Test
     public void methodCharAtTest(){
         stringReverseOrder.reverseValue("test char At");
-        Assert.assertEquals(stringReverseOrder.charAt(10), 'A');
+        Assert.assertEquals(stringReverseOrder.charAt(10), 'e');
     }
 
     @Test
     public void methodSubSequenceTest(){
         stringReverseOrder.reverseValue("test Sub Sequence Test");
-        Assert.assertEquals(stringReverseOrder.subSequence(0, 4), "tes");
+        Assert.assertEquals(stringReverseOrder.subSequence(0, 4), "tseT");
     }
 
     @Test(expectedExceptions = NullPointerException.class)

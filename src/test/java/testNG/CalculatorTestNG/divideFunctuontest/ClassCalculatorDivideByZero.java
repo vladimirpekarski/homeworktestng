@@ -13,7 +13,7 @@ public class ClassCalculatorDivideByZero {
     }
 
     @Test(expectedExceptions = ArithmeticException.class)
-    public void test() {
+    public void divideByZeroTest() {
        calculator.divide(5.0, 0.0);
     }
 }
