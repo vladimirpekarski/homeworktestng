@@ -24,7 +24,6 @@ public class PrimeNumberCheckerSimpleTest {
         Assert.assertFalse(primeNumberChecker.validate(6));
     }
 
-
     @Test(expectedExceptions = NullPointerException.class)
     public void testNullPointerException() {
         primeNumberChecker.validate(null);

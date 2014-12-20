@@ -45,5 +45,4 @@ public class StringReverseOrderMethodReverseTest {
     public void methodReverseNullTest(){
         stringReverseOrder.reverseValue(null);
     }
-
 }

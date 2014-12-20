@@ -19,5 +19,4 @@ public class Calculator {
     public  double sqrt(double value) {
         return Math.sqrt(value);
     }
-
 }
