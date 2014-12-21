@@ -33,13 +33,29 @@ public class StringReverseOrderMethodReverseTest {
 
     @Test
     public void methodReverseSecondTest(){
-        Assert.assertEquals(stringReverseOrder.reverseValue(" Test reverse ! @ # $ "), " $ # @ ! esrever tseT ");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test:  Test reverse ! @ # $ ");
+            Assert.assertEquals(stringReverseOrder.reverseValue(" Test reverse ! @ # $ "), " $ # @ ! esrever tseT ");
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodReverseSecondTest test fails" + e);
+            Assert.fail("methodReverseSecondTest test fails");
+        }
     }
 
     @Test
     public void methodLengthTest(){
-        stringReverseOrder.reverseValue("test length");
-        Assert.assertEquals(stringReverseOrder.length(), 11);
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test: 11");
+            stringReverseOrder.reverseValue("test length");
+            Assert.assertEquals(stringReverseOrder.length(), 11);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodLengthTest test fails" + e);
+            Assert.fail("methodLengthTest test fails");
+        }
     }
 
     @Test
