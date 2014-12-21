@@ -31,9 +31,14 @@ public class ClassCalculatorSqrtFunctionTest {
 
     @Test(dataProvider = "test4")
     public void TestForClassSqrtFunctSqrt(Double firstValue, Double expectedResult) {
-        LOG.info("Test Starts");
-        LOG.debug("First value: " + firstValue + " Expected result: " + expectedResult);
-        Assert.assertEquals(calculator.sqrt(firstValue), expectedResult);
-        LOG.info("Test Ends");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("First value: " + firstValue + " Expected result: " + expectedResult);
+            Assert.assertEquals(calculator.sqrt(firstValue), expectedResult);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("ClassCalculatorSqrtFunctionTest test fails " + e);
+            Assert.fail("ClassCalculatorSqrtFunctionTest test fails");
+        }
     }
 }
