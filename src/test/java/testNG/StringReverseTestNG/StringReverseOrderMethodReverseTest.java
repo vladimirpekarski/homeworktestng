@@ -1,21 +1,34 @@
 package testNG.StringReverseTestNG;
 
 import classes.StringReverseOrder;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class StringReverseOrderMethodReverseTest {
     private StringReverseOrder stringReverseOrder;
+    private static final Logger LOG = Logger.getLogger(StringReverseOrderMethodReverseTest.class);
 
     @BeforeTest
     public void init(){
         stringReverseOrder = new StringReverseOrder();
+        PropertyConfigurator.configure("./src/log4j.properties");
+        LOG.info("Initialize finished");
     }
 
     @Test
     public void methodReverseFirstTest(){
-        Assert.assertEquals(stringReverseOrder.reverseValue("testvalue"), "eulavtset");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test: testvalue");
+            Assert.assertEquals(stringReverseOrder.reverseValue("testvalue"), "eulavtset");
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodReverseFirstTest test fails" + e);
+            Assert.fail("methodReverseFirstTest test fails");
+        }
     }
 
     @Test
