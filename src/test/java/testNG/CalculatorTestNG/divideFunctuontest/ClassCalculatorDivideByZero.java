@@ -21,7 +21,8 @@ public class ClassCalculatorDivideByZero {
 
     @Test(expectedExceptions = ArithmeticException.class)
     public void divideByZeroTest() {
-       LOG.info("Start Test");
-       calculator.divide(5.0, 0.0);
+        LOG.info("Start Test");
+        calculator.divide(5.0, 0.0);
+        LOG.info("Test Ends");
     }
 }
