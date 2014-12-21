@@ -22,7 +22,7 @@ public class ClassCalcSqrtNegativeValueTest {
     public void negativeValueInSqrt() {
         try {
             LOG.info("Test Starts");
-            Assert.assertFalse(Double.isNaN(calculator.sqrt(-5)));
+            Assert.assertTrue(Double.isNaN(calculator.sqrt(-5)));
             LOG.info("Test Ends");
         } catch (AssertionError e) {
             LOG.error("ClassCalcSqrtNegativeValueTest test fails " + e);
