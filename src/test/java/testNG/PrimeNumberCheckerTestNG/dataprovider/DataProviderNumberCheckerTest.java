@@ -39,8 +39,9 @@ public class DataProviderNumberCheckerTest {
             LOG.debug("Value to test: " + valueToTest + " Expected result: " + expectedResult);
             Assert.assertEquals(primeNumberChecker.validate(valueToTest), expectedResult);
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (AssertionError e) {
+            LOG.error("DataProviderNumberCheckerTest test fails " + e);
+            Assert.fail("DataProviderNumberCheckerTest test fails");
         }
     }
 }
