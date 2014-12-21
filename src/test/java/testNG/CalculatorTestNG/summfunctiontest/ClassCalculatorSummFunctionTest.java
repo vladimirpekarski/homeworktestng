@@ -35,6 +35,7 @@ public class ClassCalculatorSummFunctionTest {
             LOG.info("Test Starts");
             LOG.debug("First value: " + firstValue + "Second value: " + secondValue + " Expected result: " + expectedResult);
             Assert.assertEquals(calculator.summ(firstValue, secondValue), expectedResult);
+            LOG.info("Test Ends");
         } catch (AssertionError e) {
             LOG.error("ClassCalculatorSummFunctionTest test fails " + e);
             Assert.fail("ClassCalculatorSummFunctionTest test fails");
