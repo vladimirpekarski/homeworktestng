@@ -7,8 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ClassCalcSqrtNegativeValue {
-    private static final Logger LOG = Logger.getLogger(ClassCalcSqrtNegativeValue.class);
+public class ClassCalcSqrtNegativeValueTest {
+    private static final Logger LOG = Logger.getLogger(ClassCalcSqrtNegativeValueTest.class);
     private Calculator calculator;
 
     @BeforeTest
@@ -20,8 +20,13 @@ public class ClassCalcSqrtNegativeValue {
 
     @Test
     public void negativeValueInSqrt() {
-        LOG.info("Test Starts");
-        Assert.assertTrue(Double.isNaN(calculator.sqrt(-5)));
-        LOG.info("Test Ends");
+        try {
+            LOG.info("Test Starts");
+            Assert.assertFalse(Double.isNaN(calculator.sqrt(-5)));
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("ClassCalcSqrtNegativeValueTest test fails " + e);
+            Assert.fail("ClassCalcSqrtNegativeValueTest test fails");
+        }
     }
 }

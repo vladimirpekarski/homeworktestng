@@ -12,7 +12,7 @@ import testNG.dataprovideclasses.DataFromFileToCalculator;
 public class ClassCalculatorDivideFunctionTest {
     private Calculator calculator;
     private static Object[][] testingDataForFunctSumm;
-    private static final Logger LOG = Logger.getLogger(ClassCalculatorDivideByZero.class);
+    private static final Logger LOG = Logger.getLogger(ClassCalculatorDivideByZeroTest.class);
 
     @BeforeTest
     public void initialize() {
@@ -31,9 +31,14 @@ public class ClassCalculatorDivideFunctionTest {
 
     @Test(dataProvider = "test3")
     public void TestForClassCalcFunctDivide(Double firstValue, Double secondValue, Double expectedResult) {
-        LOG.info("Test Starts");
-        LOG.debug("First value: " + firstValue + " Second value: " + secondValue + " Expected result: " + expectedResult);
-        Assert.assertEquals(calculator.divide(firstValue, secondValue), expectedResult);
-        LOG.info("Test Ends");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("First value: " + firstValue + " Second value: " + secondValue + " Expected result: " + expectedResult);
+            Assert.assertEquals(calculator.divide(firstValue, secondValue), expectedResult);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("ClassCalculatorDivideFunctionTest test fails " + e);
+            Assert.fail("ClassCalculatorDivideFunctionTest test fails");
+        }
     }
 }
