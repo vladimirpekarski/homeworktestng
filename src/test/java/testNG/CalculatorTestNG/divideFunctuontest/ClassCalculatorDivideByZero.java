@@ -16,12 +16,13 @@ public class ClassCalculatorDivideByZero {
     public void initialize() {
         calculator = new Calculator();
         PropertyConfigurator.configure("./src/log4j.properties");
+        LOG.info("Initialize finished");
     }
 
 
     @Test(expectedExceptions = ArithmeticException.class)
     public void divideByZeroTest() {
-        LOG.info("Start Test");
+        LOG.info("Test Starts");
         calculator.divide(5.0, 0.0);
         LOG.info("Test Ends");
     }

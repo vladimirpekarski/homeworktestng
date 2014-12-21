@@ -19,16 +19,21 @@ public class ClassCalculatorDivideFunctionTest {
         calculator = new Calculator();
         testingDataForFunctSumm  = DataFromFileToCalculator.readFromFile("./src/main/resources/dataForTestClassCalcFunctDivide.yaml");
         PropertyConfigurator.configure("./src/log4j.properties");
+        LOG.info("Initialize finished");
     }
 
     @DataProvider(name = "test3")
     public static Object[][] classCalcFunctDivide() {
+        LOG.info("Dataprovider starts");
 
         return testingDataForFunctSumm;
     }
 
     @Test(dataProvider = "test3")
     public void TestForClassCalcFunctDivide(Double firstValue, Double secondValue, Double expectedResult) {
+        LOG.info("Test Starts");
+        LOG.debug("First value: " + firstValue + " Second value: " + secondValue + " Expected result: " + expectedResult);
         Assert.assertEquals(calculator.divide(firstValue, secondValue), expectedResult);
+        LOG.info("Test Ends");
     }
 }
