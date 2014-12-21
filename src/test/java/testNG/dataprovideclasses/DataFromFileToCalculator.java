@@ -1,5 +1,7 @@
 package testNG.dataprovideclasses;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.BufferedReader;
@@ -10,8 +12,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DataFromFileToCalculator {
+    private static final Logger LOG = Logger.getLogger(DataFromFileToCalculator.class);
+
     public static Object[][] readFromFile(String path) {
         ArrayList<HashMap<String, String>> map = null;
+        PropertyConfigurator.configure("./src/log4j.properties");
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             Yaml yaml = new Yaml();
@@ -29,6 +34,7 @@ public class DataFromFileToCalculator {
             testData[i][2] = map.get(i).get("expectedResult");
         }
 
+        LOG.info("Dataprovider ends");
         return testData;
     }
 }
