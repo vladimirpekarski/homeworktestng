@@ -3,12 +3,13 @@ package testNG.CalculatorTestNG.divideFunctuontest;
 import classes.Calculator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class ClassCalculatorDivideByZero {
-    private static final Logger LOG = Logger.getLogger(ClassCalculatorDivideByZero.class);
+public class ClassCalculatorDivideByZeroTest {
+    private static final Logger LOG = Logger.getLogger(ClassCalculatorDivideByZeroTest.class);
     private Calculator calculator;
 
 
@@ -22,8 +23,13 @@ public class ClassCalculatorDivideByZero {
 
     @Test(expectedExceptions = ArithmeticException.class)
     public void divideByZeroTest() {
-        LOG.info("Test Starts");
-        calculator.divide(5.0, 0.0);
-        LOG.info("Test Ends");
+        try {
+            LOG.info("Test Starts");
+            calculator.divide(5.0, 0.0);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("ClassCalculatorDivideByZeroTest test fails " + e);
+            Assert.fail("ClassCalculatorDivideByZeroTest test fails");
+        }
     }
 }

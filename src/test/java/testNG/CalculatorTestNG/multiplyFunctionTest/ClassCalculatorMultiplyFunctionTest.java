@@ -31,9 +31,14 @@ public class ClassCalculatorMultiplyFunctionTest {
 
     @Test(dataProvider = "test4")
     public void TestForClassCalcFunctMultiply(Double firstValue, Double secondValue, Double expectedResult) {
-        LOG.info("Test Starts");
-        LOG.debug("First value: " + firstValue + " Second value: " + secondValue + " Expected result: " + expectedResult);
-        Assert.assertEquals(calculator.multiply(firstValue, secondValue), expectedResult);
-        LOG.info("Test Ends");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("First value: " + firstValue + " Second value: " + secondValue + " Expected result: " + expectedResult);
+            Assert.assertEquals(calculator.multiply(firstValue, secondValue), expectedResult);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("ClassCalculatorMultiplyFunctionTest test fails " + e);
+            Assert.fail("ClassCalculatorMultiplyFunctionTest test fails");
+        }
     }
 }
