@@ -60,18 +60,42 @@ public class StringReverseOrderMethodReverseTest {
 
     @Test
     public void methodCharAtTest(){
-        stringReverseOrder.reverseValue("test char At");
-        Assert.assertEquals(stringReverseOrder.charAt(10), 'e');
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test: e");
+            stringReverseOrder.reverseValue("test char At");
+            Assert.assertEquals(stringReverseOrder.charAt(10), 'e');
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodCharAtTest test fails" + e);
+            Assert.fail("methodCharAtTest test fails");
+        }
     }
 
     @Test
     public void methodSubSequenceTest(){
-        stringReverseOrder.reverseValue("test Sub Sequence Test");
-        Assert.assertEquals(stringReverseOrder.subSequence(0, 4), "tseT");
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test: tseT");
+            stringReverseOrder.reverseValue("test Sub Sequence Test");
+            Assert.assertEquals(stringReverseOrder.subSequence(0, 4), "tseT");
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodSubSequenceTest test fails" + e);
+            Assert.fail("methodSubSequenceTest test fails");
+        }
     }
 
     @Test(expectedExceptions = NullPointerException.class)
     public void methodReverseNullTest(){
-        stringReverseOrder.reverseValue(null);
+        try {
+            LOG.info("Test Starts");
+            LOG.debug("Value to test: null");
+            stringReverseOrder.reverseValue(null);
+            LOG.info("Test Ends");
+        } catch (AssertionError e) {
+            LOG.error("methodReverseNullTest test fails" + e);
+            Assert.fail("methodReverseNullTest test fails");
+        }
     }
 }
